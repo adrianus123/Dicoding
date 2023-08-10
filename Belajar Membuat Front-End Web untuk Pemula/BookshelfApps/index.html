@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="apps-logo">
+        <img
+          src="./assets/icons/arcticons_bookshelf.svg"
+          alt="Bookshelf-icon"
+          class="Bookshelf-icon"
+        />
+        <h1>Bookshelf Apps</h1>
+      </div>
+      <div class="search-form">
+        <form id="form-data-search">
+          <div class="form-element">
+            <input
+              type="text"
+              name="search"
+              id="search-input"
+              class="search-input"
+              placeholder="Cari judul buku"
+            />
+            <input type="submit" value="" class="search-button" />
+          </div>
+        </form>
+      </div>
+    </header>
+
+    <main>
+      <article class="container book-add">
+        <!-- Form Tambah Buku -->
+        <div id="add-form">
+          <h2>Tambah Buku</h2>
+          <form id="form-data-book">
+            <div class="form-field">
+              <label for="book-title">Judul Buku</label>
+              <input
+                type="text"
+                name="book-title"
+                id="book-title"
+                placeholder="Masukkan judul buku"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="author">Penulis</label>
+              <input
+                type="text"
+                name="author"
+                id="author"
+                placeholder="Masukkan nama penulis"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="year">Tahun Terbit</label>
+              <input
+                type="text"
+                name="year"
+                id="year"
+                placeholder="Masukkan tahun terbit buku"
+                required
+              />
+            </div>
+            <div class="form-checkbox">
+              <label for="check-completed">Selesai Dibaca</label>
+              <input
+                type="checkbox"
+                name="check-completed"
+                id="check-completed"
+              />
+            </div>
+            <div class="form-submit">
+              <input type="submit" value="Simpan buku ke rak" />
+            </div>
+          </form>
+        </div>
+
+        <!-- Form Edit Buku -->
+        <div id="edit-form" hidden>
+          <h2>Edit Buku</h2>
+          <form id="form-edit-book">
+            <div class="form-field">
+              <label for="book-title">Judul Buku</label>
+              <input
+                type="text"
+                name="book-title"
+                id="edit-title"
+                placeholder="Masukkan judul buku"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="author">Penulis</label>
+              <input
+                type="text"
+                name="author"
+                id="edit-author"
+                placeholder="Masukkan nama penulis"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="year">Tahun Terbit</label>
+              <input
+                type="text"
+                name="year"
+                id="edit-year"
+                placeholder="Masukkan tahun terbit buku"
+                required
+              />
+            </div>
+            <div class="form-checkbox">
+              <label for="check-completed">Selesai Dibaca</label>
+              <input
+                type="checkbox"
+                name="check-completed"
+                id="edit-check-completed"
+              />
+            </div>
+            <div class="form-submit">
+              <input type="submit" value="Simpan perubahan" />
+            </div>
+          </form>
+        </div>
+      </article>
+      <article class="book-list">
+        <section class="container">
+          <h2>Belum Selesai Dibaca</h2>
+          <div class="card-list" id="not-finished"></div>
+        </section>
+        <section class="container">
+          <h2>Selesai Dibaca</h2>
+          <div class="card-list" id="finished"></div>
+        </section>
+      </article>
+    </main>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

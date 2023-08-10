@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: #5299cc;
+}
+
+body {
+  background: linear-gradient(135deg, #5299cc 0%, #f5f5f5 100%);
+}
+
+header {
+  padding: 16px;
+  background-color: #ffffff;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  position: sticky;
+  top: 0;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.5);
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .apps-logo {
+  display: flex;
+  gap: 16px;
+}
+
+header .apps-logo h1 {
+  font-weight: 400;
+  font-size: 32px;
+  margin: 0;
+}
+
+header .search-form .form-element {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+header .search-form .form-element .search-input {
+  border: 2px solid #5299cc;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  padding: 8px;
+}
+
+main {
+  padding: 48px 128px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0px 10px 8px 2px rgba(0, 0, 0, 0.25);
+}
+
+main h2 {
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 24px 0;
+}
+
+main .book-add form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+main .book-add label {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+main .book-add .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+main .book-add input {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #5299cc;
+}
+
+main .book-add .form-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+main .book-add .form-submit input {
+  background-color: #5299cc;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  width: 100%;
+  border: 0;
+  padding: 8px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+main .book-add .form-submit input:hover {
+  background-color: #ffffff;
+  color: #5299cc;
+  border: 1px solid #5299cc;
+}
+
+main .book-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 24px;
+}
+
+main .book-list .card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+main .book-list .card-list .card-book {
+  border-radius: 8px;
+  border: 1px solid #5299cc;
+  padding: 8px;
+}
+
+main .book-list .card-list .card-book h3 {
+  margin: 0 0 8px 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600px;
+}
+
+main .book-list .card-list .card-book .book-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 300;
+  color: #000000;
+  margin: 0 8px;
+}
+
+main .card-list .card-book .action-button {
+  margin-top: 8px;
+  text-align: center;
+}
+
+.search-button {
+  background: url(../assets/icons/teenyicons_search-circle-solid.svg);
+  background-size: contain;
+  cursor: pointer;
+  border: none;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+.search-button:hover {
+  background: url(../assets/icons/teenyicons_search-circle-solid_hover.svg);
+}
+
+.btn-done {
+  background: url(../assets/icons/icon-park-solid_check-one.svg);
+  background-size: contain;
+  cursor: pointer;
+  border: none;
+  width: 24px;
+  height: 24px;
+  margin-inline: 2px;
+  transition: 0.3s;
+}
+
+.btn-done:hover {
+  background: url(../assets/icons/icon-park-solid_check-one_hover.svg);
+}
+
+.btn-edit {
+  background: url(../assets/icons/teenyicons_edit-circle-solid.svg);
+  background-size: contain;
+  cursor: pointer;
+  border: none;
+  width: 24px;
+  height: 24px;
+  margin-inline: 2px;
+  transition: 0.3s;
+}
+
+.btn-edit:hover {
+  background: url(../assets/icons/teenyicons_edit-circle-solid_hover.svg);
+}
+
+.btn-delete {
+  background: url(../assets/icons/pepicons-pop_trash-circle-filled.svg);
+  background-size: contain;
+  cursor: pointer;
+  border: none;
+  width: 24px;
+  height: 24px;
+  margin-inline: 2px;
+  transition: 0.3s;
+}
+
+.btn-delete:hover {
+  background: url(../assets/icons/pepicons-pop_trash-circle-filled_hover.svg);
+}
+
+.btn-undo {
+  background: url(../assets/icons/ion_arrow-undo-circle.svg);
+  background-size: contain;
+  cursor: pointer;
+  border: none;
+  width: 24px;
+  height: 24px;
+  margin-inline: 2px;
+}
+
+.btn-undo:hover {
+  background: url(../assets/icons/ion_arrow-undo-circle_hover.svg);
+}

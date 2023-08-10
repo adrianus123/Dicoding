@@ -1,0 +1,57 @@
+.card {
+  display: flex;
+}
+
+.card > img {
+  max-width: 33%;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.card_info {
+  width: 100%;
+  padding: 8px;
+  background-color: #82aae3;
+  color: #eafdfc;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card_info > h3 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.detail_info {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.table {
+  text-align: left;
+}
+
+.table tr > th {
+  font-weight: 400;
+}
+
+.open_modal {
+  padding: 8px;
+  align-self: center;
+  border: none;
+  background-color: rgba(234, 253, 252, 0.7);
+  color: #82aae3;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.open_modal:hover {
+  background-color: rgba(234, 253, 252, 1);
+}

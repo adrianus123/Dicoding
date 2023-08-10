@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CocktailPedia</title>
+    <link rel="stylesheet" href="./styles/app.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="./assets/icons/cocktail-glass.svg" alt="cocktail" />
+        <h1>CocktailPedia</h1>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="#">Categories</a>
+              <ul class="dropdown">
+                <li>
+                  <a href="">Link</a>
+                </li>
+                <li>
+                  <a href="">Link</a>
+                </li>
+                <li>
+                  <a href="">Link</a>
+                </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#">Ingredients</a>
+            <ul class="dropdown">
+              <li>
+                <a href="">Link</a>
+              </li>
+              <li>
+                <a href="">Link</a>
+              </li>
+              <li>
+                <a href="">Link</a>
+              </li>
+            </ul></li>
+          <li><a href="#">Glasses</a></li>
+          <li><a href="#">Alcoholic</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <section class="search-bar">
+          <input type="search" id="search_bar" placeholder="Search..." />
+          <button>
+            <img src="./assets/icons/search.svg" alt="search icon" />
+          </button>
+        </section>
+        <section class="list_item">
+          <h2 id="result_title">Search result for "keyword"</h2>
+          <div class="card_list">
+            <div class="card">
+              <img src="./assets/img/cocktail.png" alt="cocktail image" />
+              <div class="card_info">
+                <h3>Margarita</h3>
+                <div class="detail_info">
+                  <table class="table" aria-describedby="information of item">
+                    <tr>
+                      <th>Category</th>
+                      <td>:</td>
+                      <td>Ordinary Drink</td>
+                    </tr>
+                    <tr>
+                      <th>Glasses</tg>
+                      <td>:</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th>Alcoholic</th>
+                      <td>:</td>
+                      <td></td>
+                    </tr>
+                  </table>
+                </div>
+                <button class="open_modal" data-open="modal">Open Detail</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <div class="modal" id="modal">
+      <div class="modal_dialog">
+        <div class="modal_header">
+          <h2>Margarita</h2>
+          <button class="close_modal" aria-label="close modal" data-close>×</button>
+        </div>
+        <div class="modal_content">
+          <img src="./assets/img/cocktail.png" alt="cocktail image">
+          <div>
+            <div>
+              <h4>Ingredients</h4>
+            </div>
+            <div>
+              <h4>Instructions</h4>
+              <p>Rub the rim of the glass with the lime slice to make the salt stick to it. Take care to moisten only the outer rim and sprinkle the salt on it. The salt should present to the lips of the imbiber and never mix into the cocktail. Shake the other ingredients with ice, then carefully pour into the glass.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./scripts/modal.js"></script>
+  </body>
+</html>

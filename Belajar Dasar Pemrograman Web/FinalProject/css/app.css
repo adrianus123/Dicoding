@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Quattrocento+Sans:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Quattrocento Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: #19376d;
+  color: white;
+}
+header.navbar-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(11, 36, 71, 0.8);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding-block: 1rem;
+}
+header.navbar-container .menu-icon {
+  color: white;
+  cursor: pointer;
+  font-size: 25px;
+  display: none;
+}
+header.navbar-container .logo h1 {
+  font-variant: small-caps;
+  font-size: 25px;
+}
+header.navbar-container .logo span {
+  font-size: 1.5em;
+}
+header.navbar-container .nav-list ul {
+  display: flex;
+  justify-content: center;
+}
+header.navbar-container .nav-list li {
+  list-style-type: none;
+}
+header.navbar-container .nav-list li a {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: white;
+  font-weight: 500;
+  padding: 1.5rem 1rem;
+  transition: all 0.2s ease-in-out;
+}
+header.navbar-container .nav-list li:hover a {
+  background-color: white;
+  color: #0b2447;
+}
+
+main .top-wrapper {
+  background-image: url("../assets/img/galaxy.jpg");
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .top-wrapper .container {
+  text-align: center;
+}
+main .top-wrapper .container h1 {
+  font-size: 4rem;
+}
+main .content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .content article {
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: 1rem 2rem;
+  box-shadow: 0px 5px 15px 2px rgba(255, 255, 255, 0.75);
+}
+main .content article h2 {
+  font-size: 2em;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.75);
+  margin-bottom: 16px;
+}
+main .content article p {
+  line-height: 2rem;
+  text-align: justify;
+}
+main .content .planet .planet-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 2rem;
+  margin-top: 16px;
+}
+main .content .planet .planet-list li {
+  list-style-type: none;
+  text-align: center;
+}
+main .content .planet .planet-list .info-planet img {
+  width: 250px;
+  border-radius: 16px;
+}
+main .content .profile .about-table {
+  margin: 0 auto;
+}
+main .content .profile .about-table tr td {
+  padding: 1rem;
+}
+main .content .profile img {
+  width: 150px;
+  display: block;
+  margin: 8px auto;
+  border-radius: 6px;
+}
+footer {
+  padding: 20px;
+  color: white;
+  background-color: rgb(11, 36, 71);
+  text-align: center;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  header.navbar-container {
+    justify-content: space-between;
+    padding-inline: 16px;
+  }
+  header.navbar-container .menu-icon {
+    display: block;
+  }
+  header.navbar-container .logo h1 {
+    font-size: 20px;
+  }
+  header.navbar-container .nav-list ul {
+    display: none;
+  }
+  main .top-wrapper .container h1 {
+    font-size: 2rem;
+  }
+  main .content .planet .planet-list .info-planet img {
+    width: 100%;
+  }
+  main .content article h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  main .content article p {
+    line-height: 1.5rem;
+    text-align: justify;
+  }
+  main .content .profile .about-table tr td {
+    padding: .5rem;
+  }
+}
