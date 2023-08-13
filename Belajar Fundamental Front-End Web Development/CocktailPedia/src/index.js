@@ -1,5 +1,7 @@
 import "./styles/app.css";
-import "./scripts/modal.js";
-import DataSource from "./scripts/data/data-source";
+import "./scripts/components/app-bar.js";
+import "./scripts/components/nav-bar.js";
+import "./scripts/components/search-bar.js";
+import main from "./scripts/view/main";
 
-// DataSource.getAlcoholic();
+document.addEventListener("DOMContentLoaded", main);

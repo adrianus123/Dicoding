@@ -7,7 +7,7 @@ class DataSource {
         `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${keyword}`
       );
 
-      console.log(response.data);
+      return response.data;
     } catch (error) {
       console.error(error);
     }
@@ -19,7 +19,7 @@ class DataSource {
         `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`
       );
 
-      console.log(response.data);
+      return response.data;
     } catch (error) {
       console.error(error);
     }
