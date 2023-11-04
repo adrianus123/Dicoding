@@ -1,4 +1,4 @@
-import "../components/modal.js";
+import "./modal.js";
 import DataSource from "../data/data-source.js";
 
 class CardItem extends HTMLElement {
@@ -27,30 +27,28 @@ class CardItem extends HTMLElement {
 
   render() {
     this.innerHTML = `
-        <div class="card">
+        <div class="card_2">
             <img src="${this.data.strDrinkThumb}" alt="${this.data.strDrink}" />
-            <div class="card_info">
-            <h3>${this.data.strDrink}</h3>
-            <div class="detail_info">
-                <table class="table" aria-describedby="information of item">
-                <tr>
-                    <th>Category</th>
-                    <td>:</td>
-                    <td>${this.data.strCategory}</td>
-                </tr>
-                <tr>
-                    <th>Glasses</tg>
-                    <td>:</td>
-                    <td>${this.data.strGlass}</td>
-                </tr>
-                <tr>
-                    <th>Alcoholic</th>
-                    <td>:</td>
-                    <td>${this.data.strAlcoholic}</td>
-                </tr>
-                </table>
-            </div>
-            <button class="open_modal" data-open="modal">Open Detail</button>
+            <div class="card_2_info">
+                <h3>${this.data.strDrink}</h3>
+                <div class="card_detail">
+                    <div class="card_detail_item">
+                        <p>Category</p>
+                        <p>:</p>
+                        <p>${this.data.strCategory}</p>
+                    </div>
+                    <div class="card_detail_item">
+                        <p>Glasses</p>
+                        <p>:</p>
+                        <p>${this.data.strGlass}</p>
+                    </div>
+                    <div class="card_detail_item">
+                        <p>Alcoholic</p>
+                        <p>:</p>
+                        <p>${this.data.strAlcoholic}</p>
+                    </div>
+                </div>
+                <button class="open_modal" data-open="modal">How To Make</button>
             </div>
         </div>
     `;

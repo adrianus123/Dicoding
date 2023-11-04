@@ -65,10 +65,47 @@
 
 .modal_content p {
   text-align: justify;
-  font-size: 14px;
+  font-size: 12px;
+}
+
+.modal_description {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .modal.is-visible {
   visibility: visible;
   opacity: 1;
+}
+
+.ingredients > .ingredient-list {
+  font-size: 12px;
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .modal_content {
+    flex-direction: column;
+  }
+
+  .modal_content > img {
+    width: 100%;
+    border-radius: 8px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .modal_dialog {
+    max-width: 100%;
+  }
+
+  .modal_content {
+    flex-direction: column;
+  }
+
+  .modal_content > img {
+    width: 100%;
+    border-radius: 8px;
+  }
 }

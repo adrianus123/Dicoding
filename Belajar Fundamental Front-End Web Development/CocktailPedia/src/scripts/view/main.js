@@ -17,7 +17,12 @@ const main = () => {
   };
 
   const renderResult = (result) => {
-    title.innerText = `Search result for "${search.value}"`;
+    if (search.value) {
+      title.innerText = `Search result for "${search.value}"`;
+    } else {
+      title.innerText = `Search result for All`;
+    }
+
     cardList.setCocktails = result;
   };
 

@@ -32,14 +32,6 @@
   font-weight: 300;
 }
 
-.table {
-  text-align: left;
-}
-
-.table tr > th {
-  font-weight: 400;
-}
-
 .open_modal {
   padding: 8px;
   align-self: center;
@@ -54,4 +46,41 @@
 
 .open_modal:hover {
   background-color: rgba(234, 253, 252, 1);
+}
+
+.card_2 {
+  max-width: 100%;
+  background-color: #82aae3;
+  box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.5);
+}
+
+.card_2 > img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card_2_info > h3 {
+  text-align: center;
+}
+
+.card_detail {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  justify-content: space-between;
+}
+
+.card_2_info {
+  width: 100%;
+  padding: 16px;
+  color: #eafdfc;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card_detail_item {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
 }

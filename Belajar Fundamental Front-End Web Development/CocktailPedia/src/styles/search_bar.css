@@ -40,3 +40,9 @@
 button > img {
   width: 40px;
 }
+
+@media screen and (max-width: 576px) {
+  .search-bar > input {
+    width: 100%;
+  }
+}

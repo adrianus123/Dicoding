@@ -1,6 +1,30 @@
 class Modal extends HTMLElement {
   connectedCallback() {
+    if (this.data) {
+      let count = 1;
+      let ingredients = [];
+      for (const i in this.data) {
+        let ingredient = "";
+        let measure = "";
+        if (i.startsWith("strIngredient") && this.data[i]) {
+          ingredient = this.data[i];
+          if (this.data[`strMeasure` + count]) {
+            measure = this.data[`strMeasure` + count];
+          } else {
+            measure = "";
+          }
+          count++;
+          ingredients.push(`${measure} ${ingredient}`);
+        }
+      }
+      this.ingredients = ingredients;
+    }
+
     this.render();
+  }
+
+  setIngredients(ingredients) {
+    this.ingredients = ingredients;
   }
 
   set setData(data) {
@@ -19,9 +43,10 @@ class Modal extends HTMLElement {
         </div>
         <div class="modal_content">
           <img src="${this.data.strDrinkThumb}" alt="cocktail image" />
-          <div>
+          <div class="modal_description">
             <div>
               <h4>Ingredients</h4>
+              <ul class="ingredients"></ul>
             </div>
             <div>
               <h4>Instructions</h4>
@@ -31,6 +56,14 @@ class Modal extends HTMLElement {
         </div>
       </div>
     `;
+
+    let ingredientsCon = this.querySelector(".ingredients");
+    this.ingredients?.forEach((item) => {
+      let listItem = document.createElement("li");
+      listItem.classList.add("ingredient-list");
+      listItem.innerText = item;
+      ingredientsCon.appendChild(listItem);
+    });
 
     this.querySelector("[data-close]").addEventListener("click", () => {
       const modalElement = document.getElementById("modal");
