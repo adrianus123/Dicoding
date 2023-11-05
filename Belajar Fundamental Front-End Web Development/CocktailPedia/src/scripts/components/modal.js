@@ -10,8 +10,6 @@ class Modal extends HTMLElement {
           ingredient = this.data[i];
           if (this.data[`strMeasure` + count]) {
             measure = this.data[`strMeasure` + count];
-          } else {
-            measure = "";
           }
           count++;
           ingredients.push(`${measure} ${ingredient}`);

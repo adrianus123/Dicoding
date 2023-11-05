@@ -1,3 +1,5 @@
+import search from "../../../public/assets/icons/search.svg";
+
 class SearchBar extends HTMLElement {
   connectedCallback() {
     this.render();
@@ -16,9 +18,7 @@ class SearchBar extends HTMLElement {
     this.innerHTML = `
         <section class="search-bar">
             <input type="search" id="search_input" placeholder="Search..." />
-            <button id="search_button" type>
-                <img src="/assets/icons/search.svg" alt="search icon" />
-            </button>
+            <button id="search_button"></button>
         </section>
     `;
 
@@ -26,6 +26,12 @@ class SearchBar extends HTMLElement {
       "click",
       this._clickEvent
     );
+
+    const searchButton = this.querySelector("#search_button");
+    const searchIcon = document.createElement("img");
+    searchIcon.src = search;
+    searchIcon.alt = "search icon";
+    searchButton.appendChild(searchIcon);
   }
 }
 

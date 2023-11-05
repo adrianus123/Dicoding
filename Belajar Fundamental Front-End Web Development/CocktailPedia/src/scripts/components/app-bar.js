@@ -1,3 +1,5 @@
+import cocktailLogo from "../../../public/assets/icons/cocktail-glass.svg";
+
 class AppBar extends HTMLElement {
   connectedCallback() {
     this.render();
@@ -6,10 +8,16 @@ class AppBar extends HTMLElement {
   render() {
     this.innerHTML = `
       <div class="logo">
-          <img src="/assets/icons/cocktail-glass.svg" alt="cocktail" />
+          <div class="image"></div>
           <h1>CocktailPedia</h1>
       </div>
     `;
+
+    const logo = this.querySelector(".image");
+    const image = document.createElement("img");
+    image.src = cocktailLogo;
+    image.alt = "cocktail";
+    logo.appendChild(image);
   }
 }
 

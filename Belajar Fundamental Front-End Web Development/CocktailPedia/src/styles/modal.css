@@ -59,8 +59,9 @@
 }
 
 .modal_content > img {
-  width: 30%;
+  width: 40%;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .modal_content p {
